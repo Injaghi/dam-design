@@ -141,6 +141,46 @@ section{
   font-weight:500;
 }
 
+/* PRICING */
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.price-card{
+  background:#111826;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(0,255,204,0.2);
+  transition:0.3s;
+}
+
+.price-card:hover{
+  transform:translateY(-10px);
+}
+
+.price-card h3{
+  color:#00ffcc;
+  margin-bottom:10px;
+}
+
+.price{
+  font-size:2rem;
+  margin:15px 0;
+}
+
+.price-card ul{
+  list-style:none;
+  margin-bottom:25px;
+}
+
+.price-card ul li{
+  margin:10px 0;
+  color:#ccc;
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -225,6 +265,47 @@ footer{
     </div>
   </div>
 </section>
+<section>
+  <div class="section-title">
+    <h2>Paket Harga</h2>
+  </div>
+
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Basic</h3>
+      <div class="price">Rp50K</div>
+      <ul>
+        <li>1 Design / Edit</li>
+        <li>Revisi 1x</li>
+        <li>Proses Cepat</li>
+      </ul>
+      <a href="https://wa.me/+6281313544154?text=Halo%20saya%20mau%20order%20paket%20Basic" class="btn">Order Sekarang</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Pro</h3>
+      <div class="price">Rp150K</div>
+      <ul>
+        <li>3 Design / Edit</li>
+        <li>Revisi 3x</li>
+        <li>Prioritas</li>
+      </ul>
+      <a href="https://wa.me/+6281313544154?text=Halo%20saya%20mau%20order%20paket%20Pro" class="btn">Order Sekarang</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Premium</h3>
+      <div class="price">Rp300K</div>
+      <ul>
+        <li>Unlimited Request</li>
+        <li>Unlimited Revisi</li>
+        <li>Fast Response</li>
+      </ul>
+      <a href="https://wa.me/+6281313544154?text=Halo%20saya%20mau%20order%20paket%20Premium" class="btn">Order Sekarang</a>
+    </div>
+  </div>
+</section>
+
 
 
 
