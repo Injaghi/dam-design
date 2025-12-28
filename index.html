@@ -199,17 +199,75 @@ footer{
     transform:translateY(0);
   }
 }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(10,15,20,0.9);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  z-index:999;
+}
+
+nav h2{
+  color:#00ffcc;
+  font-weight:600;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#ccc;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#00ffcc;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+header{
+  padding-top:100px;
+}
+
 </style>
+
 </head>
 <body>
+  <nav>
+  <h2>DAM DESIGN</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#layanan">Layanan</a></li>
+    <li><a href="#galeri">Galeri</a></li>
+    <li><a href="#testimoni">Testimoni</a></li>
+    <li><a href="#harga">Harga</a></li>
+  </ul>
+</nav>
 
-<header>
+
+<header id="home">
+
   <h1>DAM DESIGN</h1>
   <p>Jasa Design Grafis, Edit Foto & Video Profesional. Cepat, rapi, dan harga bersahabat.</p>
   <a href="https://wa.me/+6281313544154" class="btn">Order via WhatsApp</a>
-</header>
+<header id="home">
 
-<section>
+
+<section id="layanan">
+
   <div class="section-title">
     <h2>Layanan Kami</h2>
   </div>
@@ -230,8 +288,10 @@ footer{
       <p>Video promosi, reels, TikTok, cinematic & montage.</p>
     </div>
   </div>
-</section>
-<section>
+<section id="layanan">
+
+<section id="galeri">
+
   <div class="section-title">
     <h2>Hasil Pekerjaan</h2>
   </div>
@@ -242,8 +302,10 @@ footer{
     <div class="card">Edit Foto</div>
     <div class="card">Video Promosi</div>
   </div>
-</section>
-<section>
+<section id="galeri">
+
+<section id="testimoni">
+
   <div class="section-title">
     <h2>Testimoni Client</h2>
   </div>
@@ -264,8 +326,10 @@ footer{
       <h4>— Budi, Online Shop</h4>
     </div>
   </div>
-</section>
-<section>
+<section id="testimoni">
+
+<section id="harga">
+
   <div class="section-title">
     <h2>Paket Harga</h2>
   </div>
@@ -304,7 +368,8 @@ footer{
       <a href="https://wa.me/+6281313544154?text=Halo%20saya%20mau%20order%20paket%20Premium" class="btn">Order Sekarang</a>
     </div>
   </div>
-</section>
+<section id="harga">
+
 
 
 
