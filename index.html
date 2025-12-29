@@ -119,8 +119,35 @@ section{
 }
 .card h4{color:#00ffcc;margin-bottom:12px}
 
+/* PORTFOLIO */
+.portfolio-grid img{
+  width:100%;
+  border-radius:14px;
+  margin-bottom:12px;
+  transition:.4s ease;
+}
+.portfolio-grid .card:hover img{
+  transform:scale(1.05);
+}
+.portfolio-grid h4{
+  text-align:center;
+  font-weight:500;
+  color:#fff;
+}
+
 /* PRICE */
 .price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
+
+/* TESTIMONI */
+.testi p{
+  font-style:italic;
+  color:#ddd;
+  margin-bottom:15px;
+}
+.testi span{
+  color:#00ffcc;
+  font-weight:600;
+}
 
 /* CLOSING */
 .closing{
@@ -185,11 +212,7 @@ footer{
 
 <section class="hero">
   <h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
-  <p>
-    Brand kamu bagus tapi sepi?
-    Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.
-    DAM DESIGN bantu kamu naik kelas dan closing lebih gampang.
-  </p>
+  <p>Brand kamu bagus tapi sepi? Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.</p>
   <a class="btn" href="https://wa.me/6281313544154" target="_blank">Konsultasi Gratis Sekarang</a>
 
   <div class="trust">
@@ -203,8 +226,8 @@ footer{
   <div class="title"><h3>Layanan Unggulan</h3></div>
   <div class="grid">
     <div class="card"><h4>Design Grafis</h4><p>Feed IG, poster, banner, logo profesional.</p></div>
-    <div class="card"><h4>Edit Foto</h4><p>Retouch & manipulasi bersih, rapi.</p></div>
-    <div class="card"><h4>Edit Video</h4><p>Reels, TikTok, video promosi konversi tinggi.</p></div>
+    <div class="card"><h4>Edit Foto</h4><p>Retouch & manipulasi bersih.</p></div>
+    <div class="card"><h4>Edit Video</h4><p>Reels & video promosi.</p></div>
   </div>
 </section>
 
@@ -217,10 +240,47 @@ footer{
   </div>
 </section>
 
+<!-- PORTFOLIO -->
+<section>
+  <div class="title"><h3>Portfolio</h3></div>
+  <div class="grid portfolio-grid">
+    <div class="card">
+      <img src="img/porto1.jpg">
+      <h4>Feed Instagram</h4>
+    </div>
+    <div class="card">
+      <img src="img/porto2.jpg">
+      <h4>Poster Promo</h4>
+    </div>
+    <div class="card">
+      <img src="img/porto3.jpg">
+      <h4>Konten Brand</h4>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section>
+  <div class="title"><h3>Testimoni Client</h3></div>
+  <div class="grid">
+    <div class="card testi">
+      <p>“Desainnya bikin brand keliatan mahal, order langsung naik.”</p>
+      <span>— UMKM Fashion</span>
+    </div>
+    <div class="card testi">
+      <p>“Fast respon, hasil rapi, cocok buat konten IG.”</p>
+      <span>— Content Creator</span>
+    </div>
+    <div class="card testi">
+      <p>“Worth it banget, langsung repeat order.”</p>
+      <span>— Online Shop</span>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="closing">
     <h3>Kalau Bukan Sekarang, Kapan?</h3>
-    <p>Setiap hari brand lain makin serius. Jangan kalah cuma karena desain kamu kelihatan biasa.</p>
     <p class="warn">⚠ Slot pengerjaan TERBATAS</p>
     <a class="btn" href="https://wa.me/6281313544154" target="_blank">Order Sekarang</a>
   </div>
@@ -232,9 +292,7 @@ footer{
 <a class="wa" href="https://wa.me/6281313544154" target="_blank">💬 WhatsApp</a>
 
 <script>
-setTimeout(()=>{
-  document.getElementById("popup").style.display="block";
-},8000);
+setTimeout(()=>{document.getElementById("popup").style.display="block"},8000);
 </script>
 
 </body>
