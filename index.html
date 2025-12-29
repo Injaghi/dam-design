@@ -32,6 +32,17 @@ body::before{
   z-index:-1;
 }
 
+/* REVEAL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:1s ease;
+}
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
 /* NAV */
 nav{
   position:fixed;
@@ -74,10 +85,13 @@ nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
   color:#000;
   font-weight:700;
   text-decoration:none;
-  box-shadow:0 0 60px rgba(0,255,204,.6);
+  box-shadow:0 0 40px rgba(0,255,204,.6);
   transition:.3s;
 }
-.btn:hover{transform:scale(1.05)}
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 80px rgba(0,255,204,1);
+}
 
 /* TRUST */
 .trust{
@@ -91,6 +105,11 @@ nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
   padding:25px;
   border-radius:18px;
   border:1px solid rgba(255,255,255,.1);
+  transition:.4s;
+}
+.trust div:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 40px rgba(0,255,204,.4);
 }
 .trust h3{color:#00ffcc;font-size:2rem}
 .trust span{color:#aaa}
@@ -116,38 +135,32 @@ section{
   border-radius:24px;
   border:1px solid rgba(255,255,255,.12);
   box-shadow:0 0 45px rgba(0,255,204,.18);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 0 80px rgba(0,255,204,.5);
 }
 .card h4{color:#00ffcc;margin-bottom:12px}
-
-/* PRICE */
-.price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
 /* PORTFOLIO */
 .portfolio-grid img{
   width:100%;
   border-radius:14px;
   margin-bottom:12px;
-  transition:.4s ease;
+  transition:.5s ease;
 }
 .portfolio-grid .card:hover img{
-  transform:scale(1.05);
+  transform:scale(1.12);
 }
-.portfolio-grid h4{
-  text-align:center;
-  font-weight:500;
-  color:#fff;
-}
+.portfolio-grid h4{text-align:center;color:#fff}
+
+/* PRICE */
+.price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
 /* TESTIMONI */
-.testi p{
-  font-style:italic;
-  color:#ddd;
-  margin-bottom:15px;
-}
-.testi span{
-  color:#00ffcc;
-  font-weight:600;
-}
+.testi p{font-style:italic;color:#ddd;margin-bottom:15px}
+.testi span{color:#00ffcc;font-weight:600}
 
 /* CLOSING */
 .closing{
@@ -157,9 +170,6 @@ section{
   text-align:center;
   box-shadow:0 0 90px rgba(0,255,204,.4);
 }
-.closing h3{font-size:2.8rem;color:#00ffcc}
-.closing p{margin:25px 0;font-size:1.15rem;color:#eee}
-.warn{color:#ffcc00;font-weight:700}
 
 /* POPUP */
 .popup{
@@ -191,12 +201,7 @@ section{
 }
 
 /* FOOTER */
-footer{
-  text-align:center;
-  padding:35px;
-  background:#04060a;
-  color:#666;
-}
+footer{text-align:center;padding:35px;background:#04060a;color:#666}
 
 @media(max-width:768px){
   .hero h2{font-size:2.4rem}
@@ -206,9 +211,7 @@ footer{
 
 <body>
 
-<nav>
-  <h1>DAM DESIGN</h1>
-</nav>
+<nav><h1>DAM DESIGN</h1></nav>
 
 <section class="hero">
   <h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
@@ -222,7 +225,7 @@ footer{
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="title"><h3>Layanan Unggulan</h3></div>
   <div class="grid">
     <div class="card"><h4>Design Grafis</h4><p>Feed IG, poster, banner, logo profesional.</p></div>
@@ -231,7 +234,7 @@ footer{
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="title"><h3>Paket Harga</h3></div>
   <div class="grid">
     <div class="card"><h4>Basic</h4><div class="price">Rp50K</div><p>1 desain • Revisi 1x</p></div>
@@ -240,44 +243,19 @@ footer{
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="title"><h3>Portfolio</h3></div>
   <div class="grid portfolio-grid">
-
-    <div class="card">
-      <img src="portfolio/feed-ig-1.jpg" alt="Feed Instagram">
-      <h4>Feed Instagram</h4>
-    </div>
-
-    <div class="card">
-      <img src="portfolio/feed-ig-2.jpg" alt="Feed Instagram">
-      <h4>Feed Instagram</h4>
-    </div>
-
-    <div class="card">
-      <img src="portfolio/feed-ig-3.jpg" alt="Feed Instagram">
-      <h4>Feed Instagram</h4>
-    </div>
-
-    <div class="card">
-      <img src="portfolio/edit-foto-1.jpg" alt="Edit Foto">
-      <h4>Edit Foto</h4>
-    </div>
-
-    <div class="card">
-      <img src="portfolio/edit-foto-2.jpg" alt="Edit Foto">
-      <h4>Edit Foto</h4>
-    </div>
-
-    <div class="card">
-      <img src="portfolio/edit-foto-3.jpg" alt="Edit Foto">
-      <h4>Edit Foto</h4>
-    </div>
-
+    <div class="card"><img src="portfolio/feed-ig-1.jpg"><h4>Feed Instagram</h4></div>
+    <div class="card"><img src="portfolio/feed-ig-2.jpg"><h4>Feed Instagram</h4></div>
+    <div class="card"><img src="portfolio/feed-ig-3.jpg"><h4>Feed Instagram</h4></div>
+    <div class="card"><img src="portfolio/edit-foto-1.jpg"><h4>Edit Foto</h4></div>
+    <div class="card"><img src="portfolio/edit-foto-2.jpg"><h4>Edit Foto</h4></div>
+    <div class="card"><img src="portfolio/edit-foto-3.jpg"><h4>Edit Foto</h4></div>
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="title"><h3>Testimoni Client</h3></div>
   <div class="grid">
     <div class="card testi">
@@ -309,7 +287,15 @@ footer{
 <a class="wa" href="https://wa.me/6281313544154" target="_blank">💬 WhatsApp</a>
 
 <script>
-setTimeout(()=>{document.getElementById("popup").style.display="block"},8000);
+const reveal=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+  reveal.forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+setTimeout(()=>{popup.style.display='block'},8000);
 </script>
 
 </body>
