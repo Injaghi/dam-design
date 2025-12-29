@@ -10,7 +10,81 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#05080d;color:#fff}
+html{scroll-behavior:smooth}
+body{background:#05080d;color:#fff;overflow-x:hidden}
+
+/* GLOW */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at top,#00ffcc33,transparent 40%),
+    radial-gradient(circle at bottom,#0066ff22,transparent 45%);
+  z-index:-1;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;width:100%;
+  padding:18px 40px;
+  background:rgba(5,8,13,.8);
+  backdrop-filter:blur(14px);
+  display:flex;justify-content:space-between;align-items:center;
+  z-index:999;
+}
+nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  padding:150px 20px 80px;
+  text-align:center;
+}
+.hero h2{
+  font-size:3.4rem;
+  line-height:1.15;
+  color:#00ffcc;
+  max-width:1000px;
+  margin:auto;
+}
+.hero p{
+  margin:30px auto 45px;
+  max-width:750px;
+  font-size:1.15rem;
+  color:#d0d0d0;
+}
+
+/* BUTTON */
+.btn{
+  padding:18px 42px;
+  border-radius:60px;
+  background:linear-gradient(135deg,#00ffcc,#00ccff);
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 0 60px rgba(0,255,204,.6);
+  transition:.3s;
+}
+.btn:hover{transform:scale(1.05)}
+
+/* TRUST */
+.trust{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+.trust div{
+  background:rgba(255,255,255,.05);
+  padding:25px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.1);
+}
+.trust h3{color:#00ffcc;font-size:2rem}
+.trust span{color:#aaa}
+
+/* SECTION */
 section{padding:120px 20px;max-width:1200px;margin:auto}
 .title{text-align:center;margin-bottom:60px}
 .title h3{color:#00ffcc;font-size:2.4rem}
@@ -23,19 +97,22 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
 }
 .card{
   background:rgba(255,255,255,.06);
-  padding:30px;
+  padding:32px;
   border-radius:24px;
   border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 0 45px rgba(0,255,204,.18);
 }
 .card h4{color:#00ffcc;margin-bottom:12px}
-.price{font-size:2.2rem;color:#00ffcc}
+
+/* PRICE */
+.price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
 /* PORTFOLIO */
 .portfolio-grid img{
   width:100%;
   border-radius:14px;
   margin-bottom:12px;
-  transition:.4s;
+  transition:.4s ease;
 }
 .portfolio-grid .card:hover img{
   transform:scale(1.05);
@@ -45,12 +122,50 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
   font-weight:500;
   color:#fff;
 }
+
+/* CLOSING */
+.closing{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  border-radius:40px;
+  padding:80px 30px;
+  text-align:center;
+  box-shadow:0 0 90px rgba(0,255,204,.4);
+}
+.closing h3{font-size:2.8rem;color:#00ffcc}
+.warn{color:#ffcc00;font-weight:700}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:35px;
+  background:#04060a;
+  color:#666;
+}
+
+@media(max-width:768px){
+  .hero h2{font-size:2.4rem}
+}
 </style>
 </head>
 
 <body>
 
-<!-- PORTFOLIO -->
+<nav>
+  <h1>DAM DESIGN</h1>
+</nav>
+
+<section class="hero">
+  <h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
+  <p>Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.</p>
+  <a class="btn" href="#">Konsultasi Gratis</a>
+
+  <div class="trust">
+    <div><h3>300+</h3><span>Project</span></div>
+    <div><h3>Fast</h3><span>Response</span></div>
+    <div><h3>Trusted</h3><span>Client</span></div>
+  </div>
+</section>
+
 <section>
   <div class="title"><h3>Portfolio</h3></div>
   <div class="portfolio-grid">
@@ -69,37 +184,24 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
   </div>
 </section>
 
-<!-- HARGA -->
 <section>
   <div class="title"><h3>Paket Harga</h3></div>
   <div class="grid">
-    <div class="card">
-      <h4>Basic</h4>
-      <div class="price">Rp50K</div>
-      <p>1 desain • Revisi 1x</p>
-    </div>
-    <div class="card">
-      <h4>Pro</h4>
-      <div class="price">Rp150K</div>
-      <p>3 desain • Prioritas</p>
-    </div>
-    <div class="card">
-      <h4>Premium</h4>
-      <div class="price">Rp300K</div>
-      <p>Unlimited • Fast response</p>
-    </div>
+    <div class="card"><h4>Basic</h4><div class="price">Rp50K</div></div>
+    <div class="card"><h4>Pro</h4><div class="price">Rp150K</div></div>
+    <div class="card"><h4>Premium</h4><div class="price">Rp300K</div></div>
   </div>
 </section>
 
-<!-- TESTIMONI -->
 <section>
-  <div class="title"><h3>Apa Kata Client?</h3></div>
-  <div class="grid">
-    <div class="card">⭐⭐⭐⭐⭐<br>Desainnya rapi & profesional.</div>
-    <div class="card">⭐⭐⭐⭐⭐<br>Fast respon, hasil sesuai request.</div>
-    <div class="card">⭐⭐⭐⭐⭐<br>Naik trust, closing lebih gampang.</div>
+  <div class="closing">
+    <h3>Kalau Bukan Sekarang, Kapan?</h3>
+    <p class="warn">⚠ Slot pengerjaan terbatas</p>
+    <a class="btn" href="#">Order Sekarang</a>
   </div>
 </section>
+
+<footer>© 2025 DAM DESIGN</footer>
 
 </body>
 </html>
