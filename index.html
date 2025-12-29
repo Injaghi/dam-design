@@ -14,8 +14,6 @@
 <meta property="og:image" content="https://injaghi.github.io/dam-design/Dam.png">
 <meta property="og:type" content="website">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -23,10 +21,10 @@
 html{scroll-behavior:smooth}
 body{background:#05080d;color:#fff;overflow-x:hidden}
 
-/* BG */
+/* BACKGROUND — LCP FIX */
 body::before{
   content:"";
-  position:fixed;
+  position:absolute;
   inset:0;
   background:
     radial-gradient(circle at top,#00ffcc33,transparent 40%),
@@ -40,22 +38,37 @@ nav{
   top:0;
   width:100%;
   padding:18px 40px;
-  background:rgba(5,8,13,.85);
-  backdrop-filter:blur(14px);
+  background:rgba(5,8,13,.8);
+  backdrop-filter:blur(10px);
+  display:flex;
+  align-items:center;
   z-index:999;
 }
-nav h1{color:#00ffcc;font-size:1.3rem}
+nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
 
 /* HERO */
 .hero{
   min-height:100vh;
   padding:150px 20px 80px;
   text-align:center;
+  will-change:transform;
+  transform:translateZ(0);
 }
-.hero h2{font-size:3.4rem;color:#00ffcc}
-.hero p{margin:30px auto 45px;max-width:750px;color:#d0d0d0}
+.hero h2{
+  font-size:3.4rem;
+  line-height:1.15;
+  color:#00ffcc;
+  max-width:1000px;
+  margin:auto;
+}
+.hero p{
+  margin:30px auto 45px;
+  max-width:750px;
+  font-size:1.15rem;
+  color:#d0d0d0;
+}
 
-/* BTN */
+/* BUTTON */
 .btn{
   padding:18px 42px;
   border-radius:60px;
@@ -66,6 +79,7 @@ nav h1{color:#00ffcc;font-size:1.3rem}
   box-shadow:0 0 60px rgba(0,255,204,.6);
   transition:.3s;
   will-change:transform;
+  transform:translateZ(0);
 }
 .btn:hover{transform:scale(1.05)}
 
@@ -80,10 +94,17 @@ nav h1{color:#00ffcc;font-size:1.3rem}
   background:rgba(255,255,255,.05);
   padding:25px;
   border-radius:18px;
+  border:1px solid rgba(255,255,255,.1);
 }
+.trust h3{color:#00ffcc;font-size:2rem}
+.trust span{color:#aaa}
 
 /* SECTION */
-section{padding:120px 20px;max-width:1200px;margin:auto}
+section{
+  padding:120px 20px;
+  max-width:1200px;
+  margin:auto;
+}
 .title{text-align:center;margin-bottom:60px}
 .title h3{color:#00ffcc;font-size:2.4rem}
 
@@ -97,28 +118,44 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
   background:rgba(255,255,255,.06);
   padding:32px;
   border-radius:24px;
+  border:1px solid rgba(255,255,255,.12);
   box-shadow:0 0 45px rgba(0,255,204,.18);
-  transition:.35s;
   will-change:transform;
+  transform:translateZ(0);
 }
-.card:hover{transform:translateY(-8px)}
+.card h4{color:#00ffcc;margin-bottom:12px}
+
+/* PRICE */
+.price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
 /* PORTFOLIO */
 .portfolio-grid img{
   width:100%;
   border-radius:14px;
   margin-bottom:12px;
-  transition:.4s;
+  transition:.4s ease;
+  will-change:transform;
+  transform:translateZ(0);
 }
-.portfolio-grid .card:hover img{transform:scale(1.05)}
-.portfolio-grid h4{text-align:center;font-weight:500}
+.portfolio-grid .card:hover img{
+  transform:scale(1.05);
+}
+.portfolio-grid h4{
+  text-align:center;
+  font-weight:500;
+  color:#fff;
+}
 
-/* PRICE */
-.price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
-
-/* TESTI */
-.testi p{font-style:italic;color:#ddd;margin-bottom:15px}
-.testi span{color:#00ffcc;font-weight:600}
+/* TESTIMONI */
+.testi p{
+  font-style:italic;
+  color:#ddd;
+  margin-bottom:15px;
+}
+.testi span{
+  color:#00ffcc;
+  font-weight:600;
+}
 
 /* CLOSING */
 .closing{
@@ -126,7 +163,11 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
   border-radius:40px;
   padding:80px 30px;
   text-align:center;
+  box-shadow:0 0 90px rgba(0,255,204,.4);
 }
+.closing h3{font-size:2.8rem;color:#00ffcc}
+.closing p{margin:25px 0;font-size:1.15rem;color:#eee}
+.warn{color:#ffcc00;font-weight:700}
 
 /* POPUP */
 .popup{
@@ -154,79 +195,114 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
   border-radius:50px;
   font-weight:700;
   text-decoration:none;
+  box-shadow:0 0 30px rgba(37,211,102,.7);
 }
 
-footer{text-align:center;padding:35px;color:#666}
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:35px;
+  background:#04060a;
+  color:#666;
+}
+
+@media(max-width:768px){
+  .hero h2{font-size:2.4rem}
+}
 </style>
 </head>
 
 <body>
 
-<nav><h1>DAM DESIGN</h1></nav>
+<nav>
+  <h1>DAM DESIGN</h1>
+</nav>
 
 <section class="hero">
-<h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
-<p>Brand kamu bagus tapi sepi? Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.</p>
-<a class="btn" href="https://wa.me/6281313544154" target="_blank">Konsultasi Gratis Sekarang</a>
+  <h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
+  <p>
+    Brand kamu bagus tapi sepi?  
+    Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.  
+    DAM DESIGN bantu kamu naik kelas dan closing lebih gampang.
+  </p>
+  <a class="btn" href="https://wa.me/6281313544154" target="_blank">Konsultasi Gratis Sekarang</a>
 
-<div class="trust">
-<div><h3>300+</h3><span>Project Selesai</span></div>
-<div><h3>Fast</h3><span>Respon & Proses</span></div>
-<div><h3>Trusted</h3><span>UMKM & Creator</span></div>
-</div>
+  <div class="trust">
+    <div><h3>300+</h3><span>Project Selesai</span></div>
+    <div><h3>Fast</h3><span>Respon & Proses</span></div>
+    <div><h3>Trusted</h3><span>UMKM & Creator</span></div>
+  </div>
 </section>
 
 <section>
-<div class="title"><h3>Layanan Unggulan</h3></div>
-<div class="grid">
-<div class="card"><h4>Design Grafis</h4><p>Feed IG, poster, banner, logo profesional.</p></div>
-<div class="card"><h4>Edit Foto</h4><p>Retouch & manipulasi bersih.</p></div>
-<div class="card"><h4>Edit Video</h4><p>Reels & video promosi.</p></div>
-</div>
+  <div class="title"><h3>Layanan Unggulan</h3></div>
+  <div class="grid">
+    <div class="card"><h4>Design Grafis</h4><p>Feed IG, poster, banner, logo profesional.</p></div>
+    <div class="card"><h4>Edit Foto</h4><p>Retouch & manipulasi bersih.</p></div>
+    <div class="card"><h4>Edit Video</h4><p>Reels & video promosi.</p></div>
+  </div>
 </section>
 
 <section>
-<div class="title"><h3>Paket Harga</h3></div>
-<div class="grid">
-<div class="card"><h4>Basic</h4><div class="price">Rp50K</div><p>1 desain • Revisi 1x</p></div>
-<div class="card"><h4>Pro</h4><div class="price">Rp150K</div><p>3 desain • Prioritas</p></div>
-<div class="card"><h4>Premium</h4><div class="price">Rp300K</div><p>Unlimited • Fast response</p></div>
-</div>
+  <div class="title"><h3>Paket Harga</h3></div>
+  <div class="grid">
+    <div class="card"><h4>Basic</h4><div class="price">Rp50K</div><p>1 desain • Revisi 1x</p></div>
+    <div class="card"><h4>Pro</h4><div class="price">Rp150K</div><p>3 desain • Prioritas</p></div>
+    <div class="card"><h4>Premium</h4><div class="price">Rp300K</div><p>Unlimited • Fast response</p></div>
+  </div>
 </section>
 
 <section>
-<div class="title"><h3>Portfolio</h3></div>
-<div class="grid portfolio-grid">
-<div class="card"><img loading="lazy" src="portfolio/feed-ig-1.jpg"><h4>Feed Instagram</h4></div>
-<div class="card"><img loading="lazy" src="portfolio/feed-ig-2.jpg"><h4>Feed Instagram</h4></div>
-<div class="card"><img loading="lazy" src="portfolio/feed-ig-3.jpg"><h4>Feed Instagram</h4></div>
-</div>
+  <div class="title"><h3>Portfolio</h3></div>
+  <div class="grid portfolio-grid">
+    <div class="card">
+      <img src="portfolio/feed-ig-1.jpg" loading="lazy" decoding="async" width="600" height="600">
+      <h4>Feed Instagram</h4>
+    </div>
+    <div class="card">
+      <img src="portfolio/feed-ig-2.jpg" loading="lazy" decoding="async" width="600" height="600">
+      <h4>Feed Instagram</h4>
+    </div>
+    <div class="card">
+      <img src="portfolio/edit-foto-1.jpg" loading="lazy" decoding="async" width="600" height="600">
+      <h4>Edit Foto</h4>
+    </div>
+  </div>
 </section>
 
 <section>
-<div class="title"><h3>Testimoni Client</h3></div>
-<div class="grid">
-<div class="card testi"><p>“Desainnya bikin brand keliatan mahal.”</p><span>— UMKM</span></div>
-<div class="card testi"><p>“Fast respon & hasil rapi.”</p><span>— Creator</span></div>
-<div class="card testi"><p>“Langsung repeat order.”</p><span>— Online Shop</span></div>
-</div>
+  <div class="title"><h3>Testimoni Client</h3></div>
+  <div class="grid">
+    <div class="card testi">
+      <p>“Desainnya bikin brand keliatan mahal, order langsung naik.”</p>
+      <span>— UMKM Fashion</span>
+    </div>
+    <div class="card testi">
+      <p>“Fast respon, hasil rapi, cocok buat konten IG.”</p>
+      <span>— Content Creator</span>
+    </div>
+    <div class="card testi">
+      <p>“Worth it banget, langsung repeat order.”</p>
+      <span>— Online Shop</span>
+    </div>
+  </div>
 </section>
 
 <section>
-<div class="closing">
-<h3>Kalau Bukan Sekarang, Kapan?</h3>
-<p>⚠ Slot pengerjaan TERBATAS</p>
-<a class="btn" href="https://wa.me/6281313544154">Order Sekarang</a>
-</div>
+  <div class="closing">
+    <h3>Kalau Bukan Sekarang, Kapan?</h3>
+    <p class="warn">⚠ Slot pengerjaan TERBATAS</p>
+    <a class="btn" href="https://wa.me/6281313544154" target="_blank">Order Sekarang</a>
+  </div>
 </section>
 
 <footer>© 2025 DAM DESIGN — All Rights Reserved</footer>
 
 <div class="popup" id="popup">🔥 Banyak client order hari ini — jangan ketinggalan!</div>
-<a class="wa" href="https://wa.me/6281313544154">💬 WhatsApp</a>
+<a class="wa" href="https://wa.me/6281313544154" target="_blank">💬 WhatsApp</a>
 
 <script>
-setTimeout(()=>popup.style.display="block",8000);
+setTimeout(()=>{document.getElementById("popup").style.display="block"},8000);
 </script>
 
 </body>
