@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>DAM DESIGN | Jasa Design Profesional</title>
+
+<meta name="description" content="DAM DESIGN — jasa desain grafis, edit foto & video profesional.">
+<meta name="author" content="DAM DESIGN">
+
+<meta property="og:title" content="DAM DESIGN — Naikin Kelas Brand Kamu">
+<meta property="og:description" content="Desain profesional yang bikin calon customer percaya & order.">
+<meta property="og:image" content="https://injaghi.github.io/dam-design/Dam.png">
+<meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,73 +20,74 @@
 html{scroll-behavior:smooth}
 body{background:#05080d;color:#fff;overflow-x:hidden}
 
-/* GLOW */
+/* BACKGROUND */
 body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at top,#00ffcc33,transparent 40%),
-    radial-gradient(circle at bottom,#0066ff22,transparent 45%);
-  z-index:-1;
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top,#00ffcc33,transparent 40%),
+radial-gradient(circle at bottom,#0066ff22,transparent 45%);
+z-index:-1;
 }
 
 /* NAV */
 nav{
-  position:fixed;top:0;width:100%;
-  padding:18px 40px;
-  background:rgba(5,8,13,.8);
-  backdrop-filter:blur(14px);
-  display:flex;justify-content:space-between;align-items:center;
-  z-index:999;
+position:fixed;
+top:0;width:100%;
+padding:18px 40px;
+background:rgba(5,8,13,.8);
+backdrop-filter:blur(14px);
+display:flex;justify-content:space-between;align-items:center;
+z-index:999;
 }
 nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
 
 /* HERO */
 .hero{
-  min-height:100vh;
-  padding:150px 20px 80px;
-  text-align:center;
+min-height:100vh;
+padding:150px 20px 80px;
+text-align:center;
 }
 .hero h2{
-  font-size:3.4rem;
-  line-height:1.15;
-  color:#00ffcc;
-  max-width:1000px;
-  margin:auto;
+font-size:3.4rem;
+line-height:1.15;
+color:#00ffcc;
+max-width:1000px;
+margin:auto;
 }
 .hero p{
-  margin:30px auto 45px;
-  max-width:750px;
-  font-size:1.15rem;
-  color:#d0d0d0;
+margin:30px auto 45px;
+max-width:750px;
+font-size:1.15rem;
+color:#d0d0d0;
 }
 
 /* BUTTON */
 .btn{
-  padding:18px 42px;
-  border-radius:60px;
-  background:linear-gradient(135deg,#00ffcc,#00ccff);
-  color:#000;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 0 60px rgba(0,255,204,.6);
-  transition:.3s;
+padding:18px 42px;
+border-radius:60px;
+background:linear-gradient(135deg,#00ffcc,#00ccff);
+color:#000;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 0 60px rgba(0,255,204,.6);
+transition:.3s;
 }
 .btn:hover{transform:scale(1.05)}
 
 /* TRUST */
 .trust{
-  margin-top:80px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:25px;
+margin-top:80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
 }
 .trust div{
-  background:rgba(255,255,255,.05);
-  padding:25px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.1);
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.1);
 }
 .trust h3{color:#00ffcc;font-size:2rem}
 .trust span{color:#aaa}
@@ -90,118 +98,129 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
 .title h3{color:#00ffcc;font-size:2.4rem}
 
 /* GRID */
-.grid,.portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 .card{
-  background:rgba(255,255,255,.06);
-  padding:32px;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,.12);
-  box-shadow:0 0 45px rgba(0,255,204,.18);
+background:rgba(255,255,255,.06);
+padding:32px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 0 45px rgba(0,255,204,.18);
 }
 .card h4{color:#00ffcc;margin-bottom:12px}
+
+/* PORTFOLIO */
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+.portfolio-grid .card{
+padding:18px;
+overflow:hidden;
+}
+.portfolio-grid img{
+width:100%;
+border-radius:14px;
+margin-bottom:12px;
+transition:.4s ease;
+}
+.portfolio-grid .card:hover img{
+transform:scale(1.05);
+}
+.portfolio-grid h4{
+text-align:center;
+font-weight:500;
+}
 
 /* PRICE */
 .price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
-/* PORTFOLIO */
-.portfolio-grid img{
-  width:100%;
-  border-radius:14px;
-  margin-bottom:12px;
-  transition:.4s ease;
+/* TESTIMONI */
+.testi p{
+font-style:italic;
+color:#ddd;
 }
-.portfolio-grid .card:hover img{
-  transform:scale(1.05);
-}
-.portfolio-grid h4{
-  text-align:center;
-  font-weight:500;
-  color:#fff;
+.testi span{
+display:block;
+margin-top:12px;
+color:#00ffcc;
+font-weight:600;
 }
 
 /* CLOSING */
 .closing{
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  border-radius:40px;
-  padding:80px 30px;
-  text-align:center;
-  box-shadow:0 0 90px rgba(0,255,204,.4);
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+border-radius:40px;
+padding:80px 30px;
+text-align:center;
+box-shadow:0 0 90px rgba(0,255,204,.4);
 }
 .closing h3{font-size:2.8rem;color:#00ffcc}
+.closing p{margin:25px 0;font-size:1.15rem;color:#eee}
 .warn{color:#ffcc00;font-weight:700}
+
+/* POPUP */
+.popup{
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+background:#00ffcc;
+color:#000;
+padding:16px 28px;
+border-radius:60px;
+font-weight:700;
+display:none;
+z-index:9999;
+}
+
+/* WA */
+.wa{
+position:fixed;
+right:25px;bottom:25px;
+background:#25D366;
+color:#fff;
+padding:14px 22px;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 0 30px rgba(37,211,102,.7);
+}
 
 /* FOOTER */
 footer{
-  text-align:center;
-  padding:35px;
-  background:#04060a;
-  color:#666;
+text-align:center;
+padding:35px;
+background:#04060a;
+color:#666;
 }
 
 @media(max-width:768px){
-  .hero h2{font-size:2.4rem}
+.hero h2{font-size:2.4rem}
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <h1>DAM DESIGN</h1>
-</nav>
+<nav><h1>DAM DESIGN</h1></nav>
 
 <section class="hero">
-  <h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
-  <p>Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.</p>
-  <a class="btn" href="#">Konsultasi Gratis</a>
+<h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
+<p>Brand kamu bagus tapi sepi? Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.</p>
+<a class="btn" href="https://wa.me/6281313544154" target="_blank">Konsultasi Gratis</a>
 
-  <div class="trust">
-    <div><h3>300+</h3><span>Project</span></div>
-    <div><h3>Fast</h3><span>Response</span></div>
-    <div><h3>Trusted</h3><span>Client</span></div>
-  </div>
+<div class="trust">
+<div><h3>300+</h3><span>Project</span></div>
+<div><h3>Fast</h3><span>Respon</span></div>
+<div><h3>Trusted</h3><span>Client</span></div>
+</div>
 </section>
 
 <section>
-  <div class="title"><h3>Portfolio</h3></div>
-  <div class="portfolio-grid">
-    <div class="card">
-      <img src="https://picsum.photos/600/400?1">
-      <h4>Feed Instagram</h4>
-    </div>
-    <div class="card">
-      <img src="https://picsum.photos/600/400?2">
-      <h4>Poster Promo</h4>
-    </div>
-    <div class="card">
-      <img src="https://picsum.photos/600/400?3">
-      <h4>Branding</h4>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="title"><h3>Paket Harga</h3></div>
-  <div class="grid">
-    <div class="card"><h4>Basic</h4><div class="price">Rp50K</div></div>
-    <div class="card"><h4>Pro</h4><div class="price">Rp150K</div></div>
-    <div class="card"><h4>Premium</h4><div class="price">Rp300K</div></div>
-  </div>
-</section>
-
-<section>
-  <div class="closing">
-    <h3>Kalau Bukan Sekarang, Kapan?</h3>
-    <p class="warn">⚠ Slot pengerjaan terbatas</p>
-    <a class="btn" href="#">Order Sekarang</a>
-  </div>
-</section>
-
-<footer>© 2025 DAM DESIGN</footer>
-
-</body>
-</html>
+<div class="title"><h3>Portfolio</h3></div>
+<div class="portfolio-grid
