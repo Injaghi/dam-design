@@ -22,7 +22,7 @@
 html{scroll-behavior:smooth}
 body{background:#05080d;color:#fff;overflow-x:hidden}
 
-/* GLOW BACKGROUND */
+/* GLOW */
 body::before{
   content:"";
   position:fixed;
@@ -77,7 +77,7 @@ nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
 }
 .btn:hover{transform:scale(1.05)}
 
-/* TRUST BAR */
+/* TRUST */
 .trust{
   margin-top:80px;
   display:grid;
@@ -116,6 +116,27 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
 /* PRICE */
 .price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
+/* PORTFOLIO */
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.portfolio-grid img{
+  width:100%;
+  border-radius:14px;
+  margin-bottom:12px;
+  transition:.4s ease;
+}
+.portfolio-grid .card:hover img{
+  transform:scale(1.05);
+}
+.portfolio-grid h4{
+  text-align:center;
+  font-weight:500;
+  color:#fff;
+}
+
 /* CLOSING */
 .closing{
   background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
@@ -128,7 +149,7 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
 .closing p{margin:25px 0;font-size:1.15rem;color:#eee}
 .warn{color:#ffcc00;font-weight:700}
 
-/* POPUP CTA */
+/* POPUP */
 .popup{
   position:fixed;
   bottom:30px;
@@ -143,7 +164,7 @@ section{padding:120px 20px;max-width:1200px;margin:auto}
   z-index:9999;
 }
 
-/* FLOAT WA */
+/* WA */
 .wa{
   position:fixed;
   right:25px;bottom:25px;
@@ -164,7 +185,6 @@ footer{
   color:#666;
 }
 
-/* MOBILE */
 @media(max-width:768px){
   .hero h2{font-size:2.4rem}
 }
@@ -173,60 +193,41 @@ footer{
 
 <body>
 
-<nav>
-  <h1>DAM DESIGN</h1>
-</nav>
+<nav><h1>DAM DESIGN</h1></nav>
 
 <section class="hero">
   <h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
-  <p>
-    Brand kamu bagus tapi sepi?  
-    Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.  
-    DAM DESIGN bantu kamu naik kelas dan closing lebih gampang.
-  </p>
-  <a class="btn" href="https://wa.me/6281313544154" target="_blank">Konsultasi Gratis Sekarang</a>
-
+  <p>Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.</p>
+  <a class="btn" href="https://wa.me/6281313544154" target="_blank">Konsultasi Gratis</a>
   <div class="trust">
-    <div><h3>300+</h3><span>Project Selesai</span></div>
-    <div><h3>Fast</h3><span>Respon & Proses</span></div>
-    <div><h3>Trusted</h3><span>UMKM & Creator</span></div>
+    <div><h3>300+</h3><span>Project</span></div>
+    <div><h3>Fast</h3><span>Response</span></div>
+    <div><h3>Trusted</h3><span>Client</span></div>
   </div>
 </section>
 
 <section>
-  <div class="title"><h3>Layanan Unggulan</h3></div>
-  <div class="grid">
-    <div class="card"><h4>Design Grafis</h4><p>Feed IG, poster, banner, logo profesional.</p></div>
-    <div class="card"><h4>Edit Foto</h4><p>Retouch & manipulasi bersih, rapi.</p></div>
-    <div class="card"><h4>Edit Video</h4><p>Reels, TikTok, video promosi konversi tinggi.</p></div>
+  <div class="title"><h3>Portfolio</h3></div>
+  <div class="portfolio-grid">
+    <div class="card">
+      <img src="img1.jpg">
+      <h4>Feed Instagram</h4>
+    </div>
+    <div class="card">
+      <img src="img2.jpg">
+      <h4>Poster Promo</h4>
+    </div>
+    <div class="card">
+      <img src="img3.jpg">
+      <h4>Branding</h4>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="title"><h3>Paket Harga</h3></div>
-  <div class="grid">
-    <div class="card"><h4>Basic</h4><div class="price">Rp50K</div><p>1 desain • Revisi 1x</p></div>
-    <div class="card"><h4>Pro</h4><div class="price">Rp150K</div><p>3 desain • Prioritas</p></div>
-    <div class="card"><h4>Premium</h4><div class="price">Rp300K</div><p>Unlimited • Fast response</p></div>
-  </div>
-</section>
+<footer>© 2025 DAM DESIGN</footer>
 
-<section>
-  <div class="closing">
-    <h3>Kalau Bukan Sekarang, Kapan?</h3>
-    <p>
-      Setiap hari brand lain makin serius.  
-      Jangan kalah cuma karena desain kamu kelihatan biasa.
-    </p>
-    <p class="warn">⚠ Slot pengerjaan TERBATAS</p>
-    <a class="btn" href="https://wa.me/6281313544154" target="_blank">Order Sekarang</a>
-  </div>
-</section>
-
-<footer>© 2025 DAM DESIGN — All Rights Reserved</footer>
-
-<div class="popup" id="popup">🔥 Banyak client order hari ini — jangan ketinggalan!</div>
-<a class="wa" href="https://wa.me/6281313544154" target="_blank">💬 WhatsApp</a>
+<div class="popup" id="popup">🔥 Slot hari ini hampir habis!</div>
+<a class="wa" href="https://wa.me/6281313544154">💬 WhatsApp</a>
 
 <script>
 setTimeout(()=>{
