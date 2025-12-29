@@ -14,6 +14,8 @@
 <meta property="og:image" content="https://injaghi.github.io/dam-design/Dam.png">
 <meta property="og:type" content="website">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -30,17 +32,6 @@ body::before{
     radial-gradient(circle at top,#00ffcc33,transparent 40%),
     radial-gradient(circle at bottom,#0066ff22,transparent 45%);
   z-index:-1;
-}
-
-/* REVEAL ANIMATION */
-.reveal{
-  opacity:0;
-  transform:translateY(50px);
-  transition:1s ease;
-}
-.reveal.show{
-  opacity:1;
-  transform:none;
 }
 
 /* NAV */
@@ -85,13 +76,11 @@ nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
   color:#000;
   font-weight:700;
   text-decoration:none;
-  box-shadow:0 0 40px rgba(0,255,204,.6);
+  box-shadow:0 0 60px rgba(0,255,204,.6);
   transition:.3s;
+  will-change:transform;
 }
-.btn:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 80px rgba(0,255,204,1);
-}
+.btn:hover{transform:scale(1.05)}
 
 /* TRUST */
 .trust{
@@ -105,14 +94,7 @@ nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
   padding:25px;
   border-radius:18px;
   border:1px solid rgba(255,255,255,.1);
-  transition:.4s;
 }
-.trust div:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 40px rgba(0,255,204,.4);
-}
-.trust h3{color:#00ffcc;font-size:2rem}
-.trust span{color:#aaa}
 
 /* SECTION */
 section{
@@ -135,32 +117,43 @@ section{
   border-radius:24px;
   border:1px solid rgba(255,255,255,.12);
   box-shadow:0 0 45px rgba(0,255,204,.18);
-  transition:.4s;
+  transition:.35s ease;
+  will-change:transform;
 }
 .card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 0 80px rgba(0,255,204,.5);
+  transform:translateY(-8px) scale(1.02);
 }
-.card h4{color:#00ffcc;margin-bottom:12px}
 
 /* PORTFOLIO */
 .portfolio-grid img{
   width:100%;
   border-radius:14px;
   margin-bottom:12px;
-  transition:.5s ease;
+  transition:.4s ease;
+  will-change:transform;
 }
 .portfolio-grid .card:hover img{
-  transform:scale(1.12);
+  transform:scale(1.05);
 }
-.portfolio-grid h4{text-align:center;color:#fff}
+.portfolio-grid h4{
+  text-align:center;
+  font-weight:500;
+  color:#fff;
+}
 
 /* PRICE */
 .price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
 /* TESTIMONI */
-.testi p{font-style:italic;color:#ddd;margin-bottom:15px}
-.testi span{color:#00ffcc;font-weight:600}
+.testi p{
+  font-style:italic;
+  color:#ddd;
+  margin-bottom:15px;
+}
+.testi span{
+  color:#00ffcc;
+  font-weight:600;
+}
 
 /* CLOSING */
 .closing{
@@ -169,21 +162,6 @@ section{
   padding:80px 30px;
   text-align:center;
   box-shadow:0 0 90px rgba(0,255,204,.4);
-}
-
-/* POPUP */
-.popup{
-  position:fixed;
-  bottom:30px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#00ffcc;
-  color:#000;
-  padding:16px 28px;
-  border-radius:60px;
-  font-weight:700;
-  display:none;
-  z-index:9999;
 }
 
 /* WA */
@@ -201,7 +179,12 @@ section{
 }
 
 /* FOOTER */
-footer{text-align:center;padding:35px;background:#04060a;color:#666}
+footer{
+  text-align:center;
+  padding:35px;
+  background:#04060a;
+  color:#666;
+}
 
 @media(max-width:768px){
   .hero h2{font-size:2.4rem}
@@ -225,78 +208,18 @@ footer{text-align:center;padding:35px;background:#04060a;color:#666}
   </div>
 </section>
 
-<section class="reveal">
-  <div class="title"><h3>Layanan Unggulan</h3></div>
-  <div class="grid">
-    <div class="card"><h4>Design Grafis</h4><p>Feed IG, poster, banner, logo profesional.</p></div>
-    <div class="card"><h4>Edit Foto</h4><p>Retouch & manipulasi bersih.</p></div>
-    <div class="card"><h4>Edit Video</h4><p>Reels & video promosi.</p></div>
-  </div>
-</section>
-
-<section class="reveal">
-  <div class="title"><h3>Paket Harga</h3></div>
-  <div class="grid">
-    <div class="card"><h4>Basic</h4><div class="price">Rp50K</div><p>1 desain • Revisi 1x</p></div>
-    <div class="card"><h4>Pro</h4><div class="price">Rp150K</div><p>3 desain • Prioritas</p></div>
-    <div class="card"><h4>Premium</h4><div class="price">Rp300K</div><p>Unlimited • Fast response</p></div>
-  </div>
-</section>
-
-<section class="reveal">
+<section>
   <div class="title"><h3>Portfolio</h3></div>
   <div class="grid portfolio-grid">
-    <div class="card"><img src="portfolio/feed-ig-1.jpg"><h4>Feed Instagram</h4></div>
-    <div class="card"><img src="portfolio/feed-ig-2.jpg"><h4>Feed Instagram</h4></div>
-    <div class="card"><img src="portfolio/feed-ig-3.jpg"><h4>Feed Instagram</h4></div>
-    <div class="card"><img src="portfolio/edit-foto-1.jpg"><h4>Edit Foto</h4></div>
-    <div class="card"><img src="portfolio/edit-foto-2.jpg"><h4>Edit Foto</h4></div>
-    <div class="card"><img src="portfolio/edit-foto-3.jpg"><h4>Edit Foto</h4></div>
-  </div>
-</section>
-
-<section class="reveal">
-  <div class="title"><h3>Testimoni Client</h3></div>
-  <div class="grid">
-    <div class="card testi">
-      <p>“Desainnya bikin brand keliatan mahal, order langsung naik.”</p>
-      <span>— UMKM Fashion</span>
-    </div>
-    <div class="card testi">
-      <p>“Fast respon, hasil rapi, cocok buat konten IG.”</p>
-      <span>— Content Creator</span>
-    </div>
-    <div class="card testi">
-      <p>“Worth it banget, langsung repeat order.”</p>
-      <span>— Online Shop</span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="closing">
-    <h3>Kalau Bukan Sekarang, Kapan?</h3>
-    <p class="warn">⚠ Slot pengerjaan TERBATAS</p>
-    <a class="btn" href="https://wa.me/6281313544154" target="_blank">Order Sekarang</a>
+    <div class="card"><img loading="lazy" decoding="async" src="portfolio/feed-ig-1.jpg"><h4>Feed Instagram</h4></div>
+    <div class="card"><img loading="lazy" decoding="async" src="portfolio/feed-ig-2.jpg"><h4>Feed Instagram</h4></div>
+    <div class="card"><img loading="lazy" decoding="async" src="portfolio/feed-ig-3.jpg"><h4>Feed Instagram</h4></div>
   </div>
 </section>
 
 <footer>© 2025 DAM DESIGN — All Rights Reserved</footer>
 
-<div class="popup" id="popup">🔥 Banyak client order hari ini — jangan ketinggalan!</div>
 <a class="wa" href="https://wa.me/6281313544154" target="_blank">💬 WhatsApp</a>
-
-<script>
-const reveal=document.querySelectorAll('.reveal');
-window.addEventListener('scroll',()=>{
-  reveal.forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight - 100){
-      el.classList.add('show');
-    }
-  });
-});
-setTimeout(()=>{popup.style.display='block'},8000);
-</script>
 
 </body>
 </html>
