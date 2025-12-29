@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DAM DESIGN | Jasa Design Grafis, Edit Foto & Video Profesional</title>
 
 <meta name="description" content="DAM DESIGN adalah jasa design grafis, edit foto, dan edit video profesional untuk UMKM, online shop, dan konten kreator.">
@@ -11,6 +12,21 @@
 <meta name="google-site-verification" content="FG5MOEaj4ar1PWtH9-LkiH7G549arUPuGrkFkT8Gu3U">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GraphicDesignService",
+  "name": "DAM DESIGN",
+  "url": "https://injaghi.github.io/dam-design/",
+  "description": "Jasa desain grafis, edit foto, dan edit video profesional.",
+  "areaServed": "Indonesia",
+  "sameAs": [
+    "https://instagram.com/damdesign2025",
+    "https://wa.me/6281313544154"
+  ]
+}
+</script>
 
 <style>
 *{
@@ -39,9 +55,7 @@ nav{
   z-index:999;
 }
 
-nav h2{
-  color:#00ffcc;
-}
+nav h2{color:#00ffcc;}
 
 nav ul{
   list-style:none;
@@ -54,10 +68,9 @@ nav ul li a{
   text-decoration:none;
 }
 
-nav ul li a:hover{
-  color:#00ffcc;
-}
+nav ul li a:hover{color:#00ffcc;}
 
+/* HERO */
 header{
   min-height:100vh;
   padding-top:120px;
@@ -79,6 +92,7 @@ header p{
   color:#ccc;
 }
 
+/* BUTTON */
 .btn{
   display:inline-block;
   padding:14px 28px;
@@ -89,9 +103,7 @@ header p{
   font-weight:bold;
 }
 
-.btn:hover{
-  background:#00e6b8;
-}
+.btn:hover{background:#00e6b8;}
 
 /* SECTION */
 section{
@@ -105,9 +117,7 @@ section{
   margin-bottom:40px;
 }
 
-.section-title h2{
-  color:#00ffcc;
-}
+.section-title h2{color:#00ffcc;}
 
 /* CARD */
 .card{
@@ -119,24 +129,15 @@ section{
   box-shadow:0 0 20px rgba(0,255,204,0.2);
 }
 
+/* GRID */
 .services,
 .testimoni,
-.pricing{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
+.pricing,
 .portfolio-grid,
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.gallery .card{
-  text-align:center;
-  color:#00ffcc;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 
 /* FOOTER */
@@ -147,9 +148,7 @@ footer{
   color:#666;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 </style>
 </head>
 
@@ -171,7 +170,9 @@ html{
 <header id="home">
   <h1>DAM DESIGN</h1>
   <p>Jasa Design Grafis, Edit Foto & Video Profesional</p>
-  <a class="btn" href="https://wa.me/6281313544154" target="_blank">Order via WhatsApp</a>
+  <a class="btn" href="https://wa.me/6281313544154" target="_blank" rel="noopener">
+    Order via WhatsApp
+  </a>
 </header>
 
 <section id="layanan">
@@ -195,45 +196,45 @@ html{
 <section id="testimoni">
   <div class="section-title"><h2>Testimoni</h2></div>
   <div class="testimoni">
-    <div class="card">"Hasil desainnya rapi, cepat, dan sesuai request. Recommended!" – Andi</div>
-    <div class="card">"Edit video keren, respon admin cepat. Pasti order lagi." – Rina</div>
-    <div class="card">"Harga bersahabat tapi kualitas premium. Mantap!" – Budi</div>
+    <div class="card">“Hasil desainnya rapi & cepat.” – Andi</div>
+    <div class="card">“Edit video keren, respon cepat.” – Rina</div>
+    <div class="card">“Harga ramah, kualitas premium.” – Budi</div>
   </div>
 </section>
 
 <section id="harga">
   <div class="section-title"><h2>Paket Harga</h2></div>
   <div class="pricing">
- <div class="card">
-  <h3>Basic</h3>
-  <p>Rp50K</p>
-  <ul>
-    <li>1 Design / Edit</li>
-    <li>Revisi 1x</li>
-    <li>Proses 1–2 Hari</li>
-  </ul>
-</div>
+    <div class="card">
+      <h3>Basic</h3>
+      <p>Rp50K</p>
+      <ul>
+        <li>1 Design / Edit</li>
+        <li>Revisi 1x</li>
+        <li>Proses 1–2 Hari</li>
+      </ul>
+    </div>
 
-<div class="card">
-  <h3>Pro</h3>
-  <p>Rp150K</p>
-  <ul>
-    <li>3 Design / Edit</li>
-    <li>Revisi 3x</li>
-    <li>Prioritas</li>
-  </ul>
-</div>
+    <div class="card">
+      <h3>Pro</h3>
+      <p>Rp150K</p>
+      <ul>
+        <li>3 Design / Edit</li>
+        <li>Revisi 3x</li>
+        <li>Prioritas</li>
+      </ul>
+    </div>
 
-<div class="card">
-  <h3>Premium</h3>
-  <p>Rp300K</p>
-  <ul>
-    <li>Unlimited Request</li>
-    <li>Unlimited Revisi</li>
-    <li>Fast Response</li>
-  </ul>
-</div>
-
+    <div class="card">
+      <h3>Premium</h3>
+      <p>Rp300K</p>
+      <ul>
+        <li>Unlimited Request</li>
+        <li>Unlimited Revisi</li>
+        <li>Fast Response</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 </main>
