@@ -11,22 +11,24 @@
 <meta name="author" content="DAM DESIGN">
 <meta name="google-site-verification" content="FG5MOEaj4ar1PWtH9-LkiH7G549arUPuGrkFkT8Gu3U">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Open Graph -->
+<!-- OPEN GRAPH -->
 <meta property="og:title" content="DAM DESIGN — Jasa Design & Edit Profesional">
-<meta property="og:description" content="Jasa design grafis, edit foto & video profesional untuk UMKM dan konten kreator.">
+<meta property="og:description" content="Jasa design grafis, edit foto & video profesional. Cepat, rapi & terpercaya.">
 <meta property="og:image" content="https://injaghi.github.io/dam-design/logo.png">
 <meta property="og:url" content="https://injaghi.github.io/dam-design/">
 <meta property="og:type" content="website">
 
-<!-- Schema -->
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "GraphicDesignService",
   "name": "DAM DESIGN",
   "url": "https://injaghi.github.io/dam-design/",
+  "description": "Jasa desain grafis, edit foto, dan edit video profesional.",
   "areaServed": "Indonesia",
   "sameAs": [
     "https://instagram.com/damdesign2025",
@@ -36,13 +38,6 @@
 </script>
 
 <style>
-:root{
-  --main:#00ffcc;
-  --bg:#0b0f14;
-  --card:rgba(255,255,255,0.08);
-  --text:#cfd3d8;
-}
-
 *{
   margin:0;
   padding:0;
@@ -51,101 +46,96 @@
 }
 
 body{
-  background:linear-gradient(180deg,#0b0f14,#06090d);
+  background:#0b0f14;
   color:#fff;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(10,15,20,0.85);
-  backdrop-filter:blur(12px);
+  background:rgba(10,15,20,0.9);
+  backdrop-filter:blur(10px);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 50px;
+  padding:15px 40px;
   z-index:999;
 }
 
-nav h2{
-  color:var(--main);
-  letter-spacing:1px;
-}
+nav h2{color:#00ffcc;}
 
 nav ul{
   list-style:none;
   display:flex;
-  gap:30px;
+  gap:25px;
 }
 
 nav ul li a{
-  color:#aaa;
+  color:#ccc;
   text-decoration:none;
-  font-weight:500;
 }
 
-nav ul li a:hover{
-  color:var(--main);
-}
+nav ul li a:hover{color:#00ffcc;}
 
 /* HERO */
 header{
   min-height:100vh;
-  padding-top:140px;
+  padding-top:120px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  background:
-    radial-gradient(circle at top, rgba(0,255,204,0.18), transparent 60%);
 }
 
 header h1{
-  font-size:3.5rem;
-  color:var(--main);
-  letter-spacing:2px;
+  font-size:3rem;
+  color:#00ffcc;
 }
 
 header p{
-  max-width:650px;
-  margin:18px 0 35px;
-  color:var(--text);
+  max-width:600px;
+  margin:15px 0 30px;
+  color:#ccc;
 }
 
 /* BUTTON */
 .btn{
-  padding:15px 36px;
-  background:var(--main);
+  display:inline-block;
+  padding:14px 30px;
+  background:#00ffcc;
   color:#000;
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 0 30px rgba(0,255,204,.45);
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 0 45px rgba(0,255,204,.7);
-}
+.btn:hover{background:#00e6b8;}
 
 /* SECTION */
 section{
-  padding:90px 25px;
-  max-width:1150px;
+  padding:80px 20px;
+  max-width:1100px;
   margin:auto;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:55px;
+  margin-bottom:40px;
 }
 
-.section-title h2{
-  color:var(--main);
-  font-size:2.2rem;
+.section-title h2{color:#00ffcc;}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  padding:25px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 0 25px rgba(0,255,204,0.25);
 }
 
 /* GRID */
@@ -154,58 +144,48 @@ section{
 .pricing,
 .portfolio-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 
-/* CARD */
-.card{
-  background:var(--card);
-  padding:30px;
-  border-radius:22px;
-  border:1px solid rgba(255,255,255,0.12);
-  transition:.35s;
+/* ANIMATION */
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.8s ease;
+}
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 35px rgba(0,255,204,.35);
-}
-
-.card h3{
-  color:var(--main);
-  margin-bottom:12px;
-}
-
-.card p,
-.card li{
-  color:var(--text);
-  font-size:.95rem;
-  list-style:none;
-}
-
-/* PRICING */
-.pricing .card{
-  text-align:center;
-}
-
-.pricing p{
-  font-size:2.2rem;
+/* FLOATING WA */
+.wa-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
   color:#fff;
-  margin:15px 0;
-}
-
-.pricing li{
-  margin:10px 0;
+  padding:14px 20px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 0 20px rgba(37,211,102,0.5);
+  z-index:999;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:35px;
-  background:#05080c;
+  padding:30px;
+  background:#080b10;
   color:#666;
-  font-size:.9rem;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav ul{display:none;}
+  header h1{font-size:2.4rem;}
 }
 
 html{scroll-behavior:smooth;}
@@ -225,47 +205,43 @@ html{scroll-behavior:smooth;}
   </ul>
 </nav>
 
-<main>
-
 <header id="home">
   <h1>DAM DESIGN</h1>
   <p>Jasa Design Grafis, Edit Foto & Video Profesional</p>
-  <a class="btn" href="https://wa.me/6281313544154" target="_blank" rel="noopener">
-    Order via WhatsApp
-  </a>
+  <a class="btn" href="https://wa.me/6281313544154" target="_blank">Order via WhatsApp</a>
 </header>
 
 <section id="layanan">
   <div class="section-title"><h2>Layanan Kami</h2></div>
   <div class="services">
-    <div class="card"><h3>Design Grafis</h3><p>Poster, banner, logo, feed Instagram</p></div>
-    <div class="card"><h3>Edit Foto</h3><p>Retouch, manipulasi & enhancement</p></div>
-    <div class="card"><h3>Edit Video</h3><p>Reels, promosi & konten kreator</p></div>
+    <div class="card fade-up"><h3>Design Grafis</h3><p>Poster, banner, logo, feed Instagram.</p></div>
+    <div class="card fade-up"><h3>Edit Foto</h3><p>Retouch, manipulasi, before-after.</p></div>
+    <div class="card fade-up"><h3>Edit Video</h3><p>Reels, TikTok, video promosi.</p></div>
   </div>
 </section>
 
 <section id="portfolio">
   <div class="section-title"><h2>Portfolio</h2></div>
   <div class="portfolio-grid">
-    <div class="card">Design Feed Instagram</div>
-    <div class="card">Photo Editing</div>
-    <div class="card">Video Reels</div>
+    <div class="card fade-up">Design Feed Instagram</div>
+    <div class="card fade-up">Edit Foto Profesional</div>
+    <div class="card fade-up">Video Reels & Promosi</div>
   </div>
 </section>
 
 <section id="testimoni">
-  <div class="section-title"><h2>Testimoni</h2></div>
+  <div class="section-title"><h2>Testimoni Client</h2></div>
   <div class="testimoni">
-    <div class="card">“Desain rapi, cepat, sesuai request.” – Andi</div>
-    <div class="card">“Edit video niat, hasil profesional.” – Rina</div>
-    <div class="card">“Harga masuk, kualitas mantap.” – Budi</div>
+    <div class="card fade-up">“Desain rapi & cepat.” — Andi</div>
+    <div class="card fade-up">“Edit video mantap.” — Rina</div>
+    <div class="card fade-up">“Harga ramah, kualitas premium.” — Budi</div>
   </div>
 </section>
 
 <section id="harga">
   <div class="section-title"><h2>Paket Harga</h2></div>
   <div class="pricing">
-    <div class="card">
+    <div class="card fade-up">
       <h3>Basic</h3>
       <p>Rp50K</p>
       <ul>
@@ -275,7 +251,7 @@ html{scroll-behavior:smooth;}
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card fade-up">
       <h3>Pro</h3>
       <p>Rp150K</p>
       <ul>
@@ -285,7 +261,7 @@ html{scroll-behavior:smooth;}
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card fade-up">
       <h3>Premium</h3>
       <p>Rp300K</p>
       <ul>
@@ -297,11 +273,24 @@ html{scroll-behavior:smooth;}
   </div>
 </section>
 
-</main>
-
 <footer>
 © 2025 DAM DESIGN • All Rights Reserved
 </footer>
+
+<a class="wa-float" href="https://wa.me/6281313544154" target="_blank">💬 Chat WhatsApp</a>
+
+<script>
+const items = document.querySelectorAll('.fade-up');
+const showOnScroll = () => {
+  items.forEach(item => {
+    if(item.getBoundingClientRect().top < window.innerHeight - 100){
+      item.classList.add('show');
+    }
+  });
+};
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+</script>
 
 </body>
 </html>
