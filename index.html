@@ -14,6 +14,8 @@
 <meta property="og:image" content="https://injaghi.github.io/dam-design/Dam.png">
 <meta property="og:type" content="website">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -21,10 +23,10 @@
 html{scroll-behavior:smooth}
 body{background:#05080d;color:#fff;overflow-x:hidden}
 
-/* BACKGROUND — LCP FIX */
+/* BACKGROUND */
 body::before{
   content:"";
-  position:absolute;
+  position:fixed;
   inset:0;
   background:
     radial-gradient(circle at top,#00ffcc33,transparent 40%),
@@ -39,7 +41,7 @@ nav{
   width:100%;
   padding:18px 40px;
   background:rgba(5,8,13,.8);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(14px);
   display:flex;
   align-items:center;
   z-index:999;
@@ -51,8 +53,6 @@ nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
   min-height:100vh;
   padding:150px 20px 80px;
   text-align:center;
-  will-change:transform;
-  transform:translateZ(0);
 }
 .hero h2{
   font-size:3.4rem;
@@ -78,8 +78,6 @@ nav h1{color:#00ffcc;font-size:1.3rem;font-weight:700}
   text-decoration:none;
   box-shadow:0 0 60px rgba(0,255,204,.6);
   transition:.3s;
-  will-change:transform;
-  transform:translateZ(0);
 }
 .btn:hover{transform:scale(1.05)}
 
@@ -120,42 +118,41 @@ section{
   border-radius:24px;
   border:1px solid rgba(255,255,255,.12);
   box-shadow:0 0 45px rgba(0,255,204,.18);
-  will-change:transform;
-  transform:translateZ(0);
 }
-.card h4{color:#00ffcc;margin-bottom:12px}
 
 /* PRICE */
 .price{font-size:2.2rem;color:#00ffcc;margin:15px 0}
 
-/* PORTFOLIO */
+/* TESTI */
+.testi p{font-style:italic;color:#ddd;margin-bottom:15px}
+.testi span{color:#00ffcc;font-weight:600}
+
+/* ===== PORTFOLIO FIX DEWA (ANTI GEPENG) ===== */
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+.portfolio-grid .card{
+  padding:18px;
+  overflow:hidden;
+  transition:.4s ease;
+}
 .portfolio-grid img{
   width:100%;
-  border-radius:14px;
-  margin-bottom:12px;
-  transition:.4s ease;
-  will-change:transform;
-  transform:translateZ(0);
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border-radius:16px;
+  margin-bottom:14px;
+  display:block;
+  transition:transform .45s ease;
 }
-.portfolio-grid .card:hover img{
-  transform:scale(1.05);
+.portfolio-grid .card:hover img{transform:scale(1.06)}
+.portfolio-grid .card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 60px rgba(0,255,204,.15);
 }
-.portfolio-grid h4{
-  text-align:center;
-  font-weight:500;
-  color:#fff;
-}
-
-/* TESTIMONI */
-.testi p{
-  font-style:italic;
-  color:#ddd;
-  margin-bottom:15px;
-}
-.testi span{
-  color:#00ffcc;
-  font-weight:600;
-}
+.portfolio-grid h4{text-align:center;font-weight:500}
 
 /* CLOSING */
 .closing{
@@ -168,21 +165,6 @@ section{
 .closing h3{font-size:2.8rem;color:#00ffcc}
 .closing p{margin:25px 0;font-size:1.15rem;color:#eee}
 .warn{color:#ffcc00;font-weight:700}
-
-/* POPUP */
-.popup{
-  position:fixed;
-  bottom:30px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#00ffcc;
-  color:#000;
-  padding:16px 28px;
-  border-radius:60px;
-  font-weight:700;
-  display:none;
-  z-index:9999;
-}
 
 /* WA */
 .wa{
@@ -198,7 +180,6 @@ section{
   box-shadow:0 0 30px rgba(37,211,102,.7);
 }
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:35px;
@@ -214,17 +195,11 @@ footer{
 
 <body>
 
-<nav>
-  <h1>DAM DESIGN</h1>
-</nav>
+<nav><h1>DAM DESIGN</h1></nav>
 
 <section class="hero">
   <h2>Desain yang Bikin Orang PERCAYA<br>dan LANGSUNG ORDER</h2>
-  <p>
-    Brand kamu bagus tapi sepi?  
-    Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.  
-    DAM DESIGN bantu kamu naik kelas dan closing lebih gampang.
-  </p>
+  <p>Brand kamu bagus tapi sepi? Masalahnya bukan produk — tapi <b>tampilan & kepercayaan</b>.</p>
   <a class="btn" href="https://wa.me/6281313544154" target="_blank">Konsultasi Gratis Sekarang</a>
 
   <div class="trust">
@@ -255,36 +230,21 @@ footer{
 <section>
   <div class="title"><h3>Portfolio</h3></div>
   <div class="grid portfolio-grid">
-    <div class="card">
-      <img src="portfolio/feed-ig-1.jpg" loading="lazy" decoding="async" width="600" height="600">
-      <h4>Feed Instagram</h4>
-    </div>
-    <div class="card">
-      <img src="portfolio/feed-ig-2.jpg" loading="lazy" decoding="async" width="600" height="600">
-      <h4>Feed Instagram</h4>
-    </div>
-    <div class="card">
-      <img src="portfolio/edit-foto-1.jpg" loading="lazy" decoding="async" width="600" height="600">
-      <h4>Edit Foto</h4>
-    </div>
+    <div class="card"><img src="portfolio/feed-ig-1.jpg" loading="lazy"><h4>Feed Instagram</h4></div>
+    <div class="card"><img src="portfolio/feed-ig-2.jpg" loading="lazy"><h4>Feed Instagram</h4></div>
+    <div class="card"><img src="portfolio/feed-ig-3.jpg" loading="lazy"><h4>Feed Instagram</h4></div>
+    <div class="card"><img src="portfolio/edit-foto-1.jpg" loading="lazy"><h4>Edit Foto</h4></div>
+    <div class="card"><img src="portfolio/edit-foto-2.jpg" loading="lazy"><h4>Edit Foto</h4></div>
+    <div class="card"><img src="portfolio/edit-foto-3.jpg" loading="lazy"><h4>Edit Foto</h4></div>
   </div>
 </section>
 
 <section>
   <div class="title"><h3>Testimoni Client</h3></div>
   <div class="grid">
-    <div class="card testi">
-      <p>“Desainnya bikin brand keliatan mahal, order langsung naik.”</p>
-      <span>— UMKM Fashion</span>
-    </div>
-    <div class="card testi">
-      <p>“Fast respon, hasil rapi, cocok buat konten IG.”</p>
-      <span>— Content Creator</span>
-    </div>
-    <div class="card testi">
-      <p>“Worth it banget, langsung repeat order.”</p>
-      <span>— Online Shop</span>
-    </div>
+    <div class="card testi"><p>“Desainnya bikin brand keliatan mahal, order langsung naik.”</p><span>— UMKM Fashion</span></div>
+    <div class="card testi"><p>“Fast respon, hasil rapi, cocok buat konten IG.”</p><span>— Content Creator</span></div>
+    <div class="card testi"><p>“Worth it banget, langsung repeat order.”</p><span>— Online Shop</span></div>
   </div>
 </section>
 
@@ -298,12 +258,7 @@ footer{
 
 <footer>© 2025 DAM DESIGN — All Rights Reserved</footer>
 
-<div class="popup" id="popup">🔥 Banyak client order hari ini — jangan ketinggalan!</div>
 <a class="wa" href="https://wa.me/6281313544154" target="_blank">💬 WhatsApp</a>
-
-<script>
-setTimeout(()=>{document.getElementById("popup").style.display="block"},8000);
-</script>
 
 </body>
 </html>
